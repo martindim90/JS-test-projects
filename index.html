@@ -3,7 +3,7 @@
   <head> </head>
   <body>
     <script>
-      var hashTriangle = ""; // looping a triangle exercise
+      /*var hashTriangle = ""; // looping a triangle exercise
 
       for (var i = 0; i < 7; i++) {
         hashTriangle += "#";
@@ -38,9 +38,42 @@
               }
           }
           board += "\n";
+      }*/
+
+      /*functions exercise*/
+
+      function mathem(x, y) {   //math.min exercise
+        return Math.min(x,y);
+      }
+      console.log(mathem(1.25,1.50));
+
+      function isEven(num) {    // check if number is odd or even with a recursive function
+        if (num === 0) {
+          return true;
+        } else if ( num === 1 ) {
+          return false;
+        } else if (num < 0) {
+          return "It must be a positive number";
+        } 
+        return isEven(num - 2);
       }
 
-     console.log(board);
+      console.log(isEven(75));
+      
+      function countBs(str) {     // count upperCase B's in a string
+          let counter = 0;
+
+        for (let i = 0; i < str.length; i++) {
+          if (str[i] === "B") {
+            counter++;
+          }
+        }
+        return counter;
+      }
+      console.log(countBs("BeanBeanBean"));
+      
+
+      
     </script>
   </body>
 </html>
