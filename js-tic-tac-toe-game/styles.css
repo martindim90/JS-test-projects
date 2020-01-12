@@ -118,6 +118,7 @@ body {
     background-color: white;
 }
 
+/*Winning Message Styles*/
 .winning-message {
     display: none;
     position: fixed;
