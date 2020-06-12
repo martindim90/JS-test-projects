@@ -3,14 +3,16 @@
   <head> </head>
   <body>
     <script>
-      /*var hashTriangle = ""; // looping a triangle exercise
+      // looping a triangle exercise
+      var hashTriangle = ""; 
 
       for (var i = 0; i < 7; i++) {
         hashTriangle += "#";
         console.log(hashTriangle);
       }
 
-      function fizzBuzz() { // fizzbuzz exercise
+      // fizzbuzz exercise
+      function fizzBuzz() { 
         for (let i = 1; i <= 100; i++) {
           if (i % 15 == 0) {
             console.log("FizzBuzz");
@@ -26,7 +28,8 @@
 
       fizzBuzz(); 
 
-      let size = 10;  // chessboard exercise
+      // chessboard exercise
+      let size = 10;  
       let board = "";
 
       for (y = 0; y < size; y++ ) {
@@ -38,40 +41,86 @@
               }
           }
           board += "\n";
-      }*/
+      }
 
       /*functions exercise*/
 
-      function mathem(x, y) {   //math.min exercise
-        return Math.min(x,y);
-      }
-      console.log(mathem(1.25,1.50));
+      //math.min exercise
+       function mathem(x, y) {   
+         return Math.min(x,y);
+       }
+       console.log(mathem(1.25,1.50));
+       
+       // check if number is odd or even with a recursive function
+       function isEven(num) {    
+         if (num === 0) {
+           return true;
+         } else if ( num === 1 ) {
+           return false;
+         } else if (num < 0) {
+           return "It must be a positive number";
+         } 
+         return isEven(num - 2);
+       }
 
-      function isEven(num) {    // check if number is odd or even with a recursive function
-        if (num === 0) {
-          return true;
-        } else if ( num === 1 ) {
-          return false;
-        } else if (num < 0) {
-          return "It must be a positive number";
-        } 
-        return isEven(num - 2);
-      }
+       console.log(isEven(75));
 
-      console.log(isEven(75));
-      
-      function countBs(str) {     // count upperCase B's in a string
-          let counter = 0;
+      // count upperCase B's in a string
+       function countBs(str) {     
+           let counter = 0;
 
-        for (let i = 0; i < str.length; i++) {
-          if (str[i] === "B") {
+         for (let i = 0; i < str.length; i++) {
+           if (str[i] === "B") {
             counter++;
-          }
-        }
-        return counter;
-      }
-      console.log(countBs("BeanBeanBean"));
+           }
+         }
+         return counter;
+       }
+       console.log(countBs("BeanBeanBean"));
+
+      //The Sum of a Range console.log(sum(range(1,10)))
+      function noStep(start, end) {
+        let arr = [];
       
+        if (start == end) {
+          return arr.push(start);
+        } else if (start < end) {
+          for (let i = start; i <= end; i++ )
+          arr.push(i); 
+        } else {
+          for (let i = start; i >= end; i--)
+          arr.push(i);
+        }
+
+        return arr;
+      }
+
+      function range(start, end, step = start > end ? -1 : 1) {
+        let array = [];
+
+        if (step < 0) {
+          for (let i = start; i >= end; i = i + step) array.push(i);
+        } else {
+          for (let i = start; i <= end; i = i + step) array.push(i)
+        }
+
+        return array;
+  }
+      function sum(array) {
+        let total = 0;
+
+        for (let val of array) {
+          total = total + val;
+          console.log(total)
+        }
+        return total;
+      }
+
+      console.log(noStep(1, 0)) 
+
+      console.log(range(0, 1, 3))
+
+      console.log(sum(noStep(1, 10)))
 
       
     </script>

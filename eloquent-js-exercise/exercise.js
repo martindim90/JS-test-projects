@@ -1,11 +1,12 @@
-let hashTriangle = ""; //looping a triangle exercise
+//looping a triangle exercise
+let hashTriangle = ""; 
 
 for (let i = 0; i < 7; i++) {
     console.log(hashTriangle + "#");
 }
 
-
-function fizzBuzz () {     // fizzbuzz exercise
+ // fizzbuzz exercise
+function fizzBuzz () {    
     for (let i = 0; i <= 100; i++) {
         if (i % 3 == 0) {
             console.log ("Fizz ");
@@ -19,8 +20,8 @@ function fizzBuzz () {     // fizzbuzz exercise
 
 fizzBuzz();
 
-
-let size = 10;  // chessboard exercise
+// chessboard exercise
+let size = 10;  
       let board = "";
 
       for (y = 0; y < size; y++ ) {
@@ -35,3 +36,13 @@ let size = 10;  // chessboard exercise
       }
 
      console.log(board);
+
+     //The Sum of a Range console.log(sum(range(1,10)))
+
+     function range (start, end) {
+         let rangeArr = [];
+
+         return start === end ? start : false;
+
+
+     }
