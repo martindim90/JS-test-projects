@@ -147,7 +147,47 @@
     reverseArrayInPlace(someArray);
     // console.log(someArray);
 
+    // A list exercise:
+    // Array to obj list
+    function arrayToList(array) {  
+      let list = null;
 
+      for (let i = array.length - 1; i >= 0; i--) {
+        list = { value: array[i], rest: list }
+      }
+      return list;
+    }
+
+    console.log(arrayToList([10, 20]));
+
+    // obj list to Array
+    function listToArray(list) {
+      let newArr = [];
+
+      for (let g = list; g; g = g.rest) {
+        newArr.push(g.value);
+      }
+      return newArr;
+    }
+
+    console.log(listToArray(arrayToList([10, 20, 30])));
+
+    // prepend helper function
+    function prepend(value, list) {
+      return {value, rest: list};
+    }
+
+    console.log(prepend(10, prepend(20, null)));
+
+    //function nth
+    function nth(list, n) {
+      if(!list) return undefined;
+      else if (n == 0) return list.value;
+      else return nth(list.rest, n - 1);
+    }
+
+    console.log(nth(arrayToList([10, 20, 30]), 3));
+    
 
     </script>
   </body>
