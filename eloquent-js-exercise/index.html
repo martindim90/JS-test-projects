@@ -8,7 +8,7 @@
 
       for (var i = 0; i < 7; i++) {
         hashTriangle += "#";
-        console.log(hashTriangle);
+        // console.log(hashTriangle);
       }
 
       // fizzbuzz exercise
@@ -26,7 +26,7 @@
         }
       }
 
-      fizzBuzz(); 
+      // fizzBuzz(); 
 
       // chessboard exercise
       let size = 10;  
@@ -49,7 +49,7 @@
        function mathem(x, y) {   
          return Math.min(x,y);
        }
-       console.log(mathem(1.25,1.50));
+      //  console.log(mathem(1.25,1.50));
        
        // check if number is odd or even with a recursive function
        function isEven(num) {    
@@ -63,7 +63,7 @@
          return isEven(num - 2);
        }
 
-       console.log(isEven(75));
+      //  console.log(isEven(75));
 
       // count upperCase B's in a string
        function countBs(str) {     
@@ -76,7 +76,7 @@
          }
          return counter;
        }
-       console.log(countBs("BeanBeanBean"));
+      //  console.log(countBs("BeanBeanBean"));
 
       //The Sum of a Range console.log(sum(range(1,10)))
       function noStep(start, end) {
@@ -116,13 +116,39 @@
         return total;
       }
 
-      console.log(noStep(1, 0)) 
+      // console.log(noStep(1, 0)) 
 
-      console.log(range(0, 1, 3))
+      // console.log(range(0, 1, 3))
 
-      console.log(sum(noStep(1, 10)))
+      // console.log(sum(noStep(1, 10)))
 
+      // Reverse Array with and without array modification without the revese() method
+      let someArray = ["To", "Be", "First"];
+
+      function reverseArray (arr) {
+        let newArray = [];
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+          newArray.push(arr[i]);
+        }
+        return newArray;
+      }
       
+      // console.log(reverseArray(someArray));
+      // console.log(someArray);
+
+      function reverseArrayInPlace (arrayValue) {
+      for(let i = 0; i < arrayValue.length; i++) {
+        arrayValue.splice(i, 0, arrayValue.splice(arrayValue.length - 1)[0]);
+      }
+      return arrayValue;
+    }
+
+    reverseArrayInPlace(someArray);
+    // console.log(someArray);
+
+
+
     </script>
   </body>
 </html>
